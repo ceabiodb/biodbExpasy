@@ -1,0 +1,27 @@
+Package: biodbExpasy
+Title: biodbExpasy, a library for connecting to Expasy Enzyme Database.
+Version: 0.99.0
+Authors@R: c(person("Pierrick", "Roger", email = "pierrick.roger@cea.fr", role = c("aut", "cre")))
+Description: The biodbExpasy library provides access to the Expasy Enzyme Database, using biodb package framework.
+biocViews: Software, Infrastructure, DataImport
+Depends:
+    R (>= 3.6)
+License: AGPL-3
+Encoding: UTF-8
+LazyData: true
+VignetteBuilder: knitr
+Suggests:
+	BiocStyle,
+	roxygen2,
+	devtools,
+	testthat (>= 2.0.0),
+	knitr,
+	rmarkdown,
+	biodb
+Imports:
+	methods
+RoxygenNote: 6.1.1
+Collate:
+    'ExpasyEnzymeConn.R'
+    'ExpasyEnzymeEntry.R'
+    'biodbExpasy-package.R'

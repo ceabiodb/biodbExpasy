@@ -1,0 +1,24 @@
+# vi: fdm=marker
+
+databases:
+
+  expasy.enzyme:
+    entry.content.type: txt
+    name: ExPASy ENZYME
+    parsing.expr:
+      accession: ^ID\s+([0-9.]+)$
+      catalytic.activity: ^CA\s+(.+?)\.?$
+      cofactor: ^CF\s+(.+?)\.?$
+      name: ^DE\s+(.+?)\.?$
+    scheduler.n: 3
+    urls:
+      base.url: https://enzyme.expasy.org/
+
+fields:
+
+  expasy.enzyme.id:
+    description: ExPASy ENZYME ID
+    case.insensitive: true
+    forbids.duplicates: true
+    type: id
+    card: many
