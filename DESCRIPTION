@@ -24,4 +24,4 @@ RoxygenNote: 6.1.1
 Collate:
     'ExpasyEnzymeConn.R'
     'ExpasyEnzymeEntry.R'
-    'biodbExpasy-package.R'
+    'package.R'
