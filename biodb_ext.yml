@@ -1,0 +1,19 @@
+email: pierrick.roger@cea.fr
+dbName: expasy.enzyme
+dbTitle: Expasy ENZYME database.
+firstname: Pierrick
+lastname: Roger
+newPkg: yes
+connType: compound
+entryType: txt
+remote: yes
+makefile: yes
+githubRepos: pkrog/biodbExpasy
+pkgName: biodbExpasy
+pkgLicense: AGPL-3
+editable: no
+writable: no
+downloadable: no
+travis: no
+rcpp: no
+vignetteName: biodbExpasy
