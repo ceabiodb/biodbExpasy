@@ -26,13 +26,9 @@ ExpasyEnzymeEntry <- R6::R6Class("ExpasyEnzymeEntry",
         biodb::BiodbTxtEntry
     ,
 
-public=list(
+private=list(
 
-initialize=function(...) {
-    super$initialize(...)
-}
-
-,doParseFieldsStep2=function(parsed.content) {
+doParseFieldsStep2=function(parsed.content) {
 
     # Cofactors may be listed on a single line, separated by a semicolon.
     if (self$hasField('COFACTOR')) {
@@ -45,5 +41,5 @@ initialize=function(...) {
     results <- g[ ! is.na(g[,1]), , drop=FALSE]
     if (nrow(results) > 0)
         self$appendFieldValue('name', results[,2])
-    
+}   
 ))

@@ -72,11 +72,18 @@ x <- mybiodb$entriesToDataframe(entries)
 x
 ```
 
-# Running the "find" web service
+# Running the "wsEnzymeByName" web service
 
-You can access the web service "find" directly with the *wsFind* method:
+You can access the web service "find" directly with the *wsEnzymeByName* method:
 ```{r}
-conn$wsFind(name="abc", retfmt="ids")
+conn$wsEnzymeByName(name="Alcohol", retfmt="ids")
+```
+
+# Running the "wsEnzymeByComment" web service
+
+You can access the web service "find" directly with the *wsEnzymeByComment* method:
+```{r}
+conn$wsEnzymeByComment(comment="best", retfmt="ids")
 ```
 
 # Closing biodb instance
