@@ -29,8 +29,6 @@ mybiodb$terminate()
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{ExpasyEnzymeEntry$new()}}
-\item \href{#method-doParseFieldsStep2}{\code{ExpasyEnzymeEntry$doParseFieldsStep2()}}
 \item \href{#method-clone}{\code{ExpasyEnzymeEntry$clone()}}
 }
 }
@@ -64,26 +62,9 @@ mybiodb$terminate()
 \item \out{<span class="pkg-link" data-pkg="biodb" data-topic="BiodbEntry" data-id="removeField">}\href{../../biodb/html/BiodbEntry.html#method-removeField}{\code{biodb::BiodbEntry$removeField()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="biodb" data-topic="BiodbEntry" data-id="setField">}\href{../../biodb/html/BiodbEntry.html#method-setField}{\code{biodb::BiodbEntry$setField()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="biodb" data-topic="BiodbEntry" data-id="setFieldValue">}\href{../../biodb/html/BiodbEntry.html#method-setFieldValue}{\code{biodb::BiodbEntry$setFieldValue()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="biodb" data-topic="BiodbTxtEntry" data-id="initialize">}\href{../../biodb/html/BiodbTxtEntry.html#method-initialize}{\code{biodb::BiodbTxtEntry$initialize()}}\out{</span>}
 }
 \out{</details>}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
-\subsection{Method \code{new()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ExpasyEnzymeEntry$new(...)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-doParseFieldsStep2"></a>}}
-\if{latex}{\out{\hypertarget{method-doParseFieldsStep2}{}}}
-\subsection{Method \code{doParseFieldsStep2()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ExpasyEnzymeEntry$doParseFieldsStep2(parsed.content)}\if{html}{\out{</div>}}
-}
-
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

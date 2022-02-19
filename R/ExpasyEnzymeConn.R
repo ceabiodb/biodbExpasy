@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' # Create an instance with default settings:
-#' mybiodb <- biodb::Biodb()
+#' mybiodb <- biodb::newInst()
 #'
 #' # Get a connector:
 #' conn <- mybiodb$getFactory()$createConn('expasy.enzyme')
