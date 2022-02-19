@@ -1,55 +1,49 @@
-# vi: fdm=marker ts=4 et cc=80 tw=80
-
-# ExpasyEnzymeEntry {{{1
-################################################################################
-
-# Declaration {{{2
-################################################################################
-
-#' Expasy Enzyme entry class.
+#' Expasy ENZYME database. entry class.
 #'
-#' This is the entry class for the Expasy Enzyme database.
+#' Entry class for Expasy ENZYME database.
+#'
+#' @seealso
+#' \code{\link{BiodbTxtEntry}}.
 #'
 #' @examples
 #' # Create an instance with default settings:
-#' mybiodb <- biodb::Biodb()
+#' mybiodb <- biodb::newInst()
 #'
-#' # Create a connector
+#' # Get a connector that inherits from ExpasyEnzymeConn:
 #' conn <- mybiodb$getFactory()$createConn('expasy.enzyme')
 #'
-#' # Get an entry
+#' # Get the first entry
 #' e <- conn$getEntry('1.1.1.1')
 #'
 #' # Terminate instance.
 #' mybiodb$terminate()
 #'
-#' @include BiodbTxtEntry.R
-#' @export ExpasyEnzymeEntry
-#' @exportClass ExpasyEnzymeEntry
-ExpasyEnzymeEntry <- methods::setRefClass("ExpasyEnzymeEntry",
-    contains='BiodbTxtEntry',
+#' @import biodb
+#' @import R6
+#' @export
+ExpasyEnzymeEntry <- R6::R6Class("ExpasyEnzymeEntry",
+    inherit=
+        biodb::BiodbTxtEntry
+    ,
 
-# Private methods {{{2
-################################################################################
+public=list(
 
-methods=list(
+initialize=function(...) {
+    super$initialize(...)
+}
 
-# Parse fields step 2 {{{3
-################################################################################
-
-.parseFieldsStep2=function(parsed.content) {
+,doParseFieldsStep2=function(parsed.content) {
 
     # Cofactors may be listed on a single line, separated by a semicolon.
-    if (.self$hasField('COFACTOR')) {
-        v <- unlist(strsplit(.self$getFieldValue('COFACTOR'), ' *; *'))
-        .self$setFieldValue('COFACTOR', v)
+    if (self$hasField('COFACTOR')) {
+        v <- unlist(strsplit(self$getFieldValue('COFACTOR'), ' *; *'))
+        self$setFieldValue('COFACTOR', v)
     }
 
     # Synonyms
     g <- stringr::str_match(parsed.content, "^AN\\s+(.+?)\\.?$")
     results <- g[ ! is.na(g[,1]), , drop=FALSE]
     if (nrow(results) > 0)
-        .self$appendFieldValue('name', results[,2])
-}
-
+        self$appendFieldValue('name', results[,2])
+    
 ))
