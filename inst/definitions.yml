@@ -1,23 +1,30 @@
-# vi: fdm=marker
+# biodb example definitions file for extensions packages, version 1.0.0
 
 databases:
-
   expasy.enzyme:
+    name: Expasy ENZYME database.
+    description: Write here the description of this database.
+    compound.db: true
     entry.content.type: txt
-    name: ExPASy ENZYME
     parsing.expr:
       accession: ^ID\s+([0-9.]+)$
       catalytic.activity: ^CA\s+(.+?)\.?$
       cofactor: ^CF\s+(.+?)\.?$
       name: ^DE\s+(.+?)\.?$
+    searchable.fields:
+      - name
+    remote: true
+    # Length in seconds of the connection sliding window
+    scheduler.t: 1
+    # Number of connections allowed inside the connection sliding window
     scheduler.n: 3
     urls:
+      # Base URL of the database server, where to find entry pages
       base.url: https://enzyme.expasy.org/
 
 fields:
-
   expasy.enzyme.id:
-    description: ExPASy ENZYME ID
+    description: Expasy ENZYME database. ID
     case.insensitive: true
     forbids.duplicates: true
     type: id
