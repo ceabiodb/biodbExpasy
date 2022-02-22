@@ -1,6 +1,6 @@
 # biodbExpasy
 
-An R package for accessing Expasy ENZYME database., based on R
+An R package for accessing Expasy ENZYME database, based on R
 package/framework [biodb](https://github.com/pkrog/biodb/).
 
 ## Introduction
@@ -22,7 +22,7 @@ devtools::install_github('pkrog/biodbExpasy', dependencies=TRUE)
 
 To instantiate a connector to Expasy ENZYME database., run:
 ```r
-mybiodb <- biodb::Biodb()
+mybiodb <- biodb::newInst()
 conn <- mybiodb$getFactory()$createConn('expasy.enzyme')
 mybiodb$terminate()
 ```
