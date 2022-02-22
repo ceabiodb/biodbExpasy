@@ -20,6 +20,7 @@
 #'
 #' @import biodb
 #' @import R6
+#' @import stringr
 #' @export
 ExpasyEnzymeEntry <- R6::R6Class("ExpasyEnzymeEntry",
     inherit=
