@@ -6,7 +6,7 @@
 \alias{biodbExpasy-package}
 \title{biodbExpasy: biodbExpasy, a library for connecting to Expasy ENZYME database.}
 \description{
-The biodbExpasy library is an extension of the biodb framework package, that provides access to Expasy ENZYME database. It allows to retrieve entries by their accession number, and run specific web services.
+The biodbExpasy library provides access to Expasy ENZYME database, using biodb package framework. It allows to retrieve entries by their accession number. Web services can be accessed for searching the database by name or comments.
 }
 \details{
 See vignette biodbExpasy:\preformatted{vignette('biodbExpasy', package='biodbExpasy')

@@ -143,7 +143,7 @@ parseWsReturnedHtml=function(results, retfmt) {
 
     fct <- function(x) {
         u <- c(self$getPropValSlot('urls', 'base.url'), 'EC',
-               paste(x, 'txt', sep='.'))
+            paste(x, 'txt', sep='.'))
         return(biodb::BiodbUrl$new(url=u)$toString())
     }
     urls <- vapply(id, fct, FUN.VALUE='')
@@ -165,9 +165,9 @@ parseWsReturnedHtml=function(results, retfmt) {
         fields <- strsplit(x, '\\.')[[1]]
         if (length(fields) == 4) {
             u <- c(self$getPropValSlot('urls', 'base.url'), 'cgi-bin',
-                   'enzyme', 'enzyme-search-ec')
+                'enzyme', 'enzyme-search-ec')
             p <- list(field1=fields[[1]], field2=fields[[2]],
-                      field3=fields[[3]], field4=fields[[4]])
+                field3=fields[[3]], field4=fields[[4]])
             urls[[i]] <- biodb::BiodbUrl$new(url=u, params=p)$toString()
         }
     }
@@ -180,7 +180,7 @@ parseWsReturnedHtml=function(results, retfmt) {
     # TODO Modify this code to build the individual URLs to the entry images 
     fct <- function(x) {
         u <- c(self$getPropValSlot('urls', 'base.url'), 'images', x,
-               'image.png')
+            'image.png')
         BiodbUrl$new(url=u)$toString()
     }
 

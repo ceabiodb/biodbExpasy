@@ -1,3 +1,4 @@
+<!-- vimvars: b:markdown_embedded_syntax={'r':''} -->
 # biodbExpasy
 
 An R package for accessing Expasy ENZYME database, based on R
@@ -14,8 +15,7 @@ Install the latest version of this package by running the following commands:
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install('biodb')
-devtools::install_github('pkrog/biodbExpasy', dependencies=TRUE)
+BiocManager::install('biodbExpasy')
 ```
 
 ## Examples

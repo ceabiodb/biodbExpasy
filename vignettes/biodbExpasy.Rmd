@@ -6,22 +6,32 @@ package: "`r BiocStyle::pkg_ver('biodbExpasy')`"
 abstract: |
   How to use the biodbExpasy connector and its methods.
 vignette: |
-  %\VignetteIndexEntry{Introduction to the biodbExpasy package.}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+    %\VignetteIndexEntry{Introduction to the biodbExpasy package.}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
 output:
-  BiocStyle::html_document:
-    toc: yes
-    toc_depth: 4
-    toc_float:
-      collapsed: false
-  BiocStyle::pdf_document: default
+    BiocStyle::html_document:
+      toc: yes
+      toc_depth: 4
+      toc_float:
+          collapsed: false
+    BiocStyle::pdf_document: default
+bibliography: references.bib
 ---
 
-# Purpose
+# Introduction
 
-biodbExpasy is a *biodb* extension package that implements a connector to
-Expasy ENZYME database..
+biodbExpasy is a *biodb* extension package that implements a connector to the
+[Expasy ENZYME](https://enzyme.expasy.org/) database [@bairoch2000_expasy].
+
+# Installation
+
+Install using Bioconductor:
+```{r, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install('biodbExpasy')
+```
 
 # Initialization
 
@@ -93,3 +103,11 @@ ensure release of resources (file handles, database connection, etc):
 ```{r}
 mybiodb$terminate()
 ```
+
+# Session information
+
+```{r}
+sessionInfo()
+```
+
+# References
