@@ -1,6 +1,6 @@
 Package: biodbExpasy
 Title: biodbExpasy, a library for connecting to Expasy ENZYME database.
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: 
     c(person(given = "Pierrick",
              family = "Roger",
