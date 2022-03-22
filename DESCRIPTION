@@ -1,13 +1,13 @@
 Package: biodbExpasy
 Title: biodbExpasy, a library for connecting to Expasy ENZYME database.
-Version: 0.99.2
+Version: 0.99.3
 Authors@R: 
     c(person(given = "Pierrick",
              family = "Roger",
              role = c("aut", "cre"),
-             email = "pierrick.roger@cea.fr"),
+             email = "pierrick.roger@cea.fr",
              comment=c(ORCID="0000-0001-8177-4873")
-      )
+      ))
 Description: The biodbExpasy library provides access to Expasy ENZYME database,
     using biodb package framework.  It allows to retrieve entries by their
     accession number. Web services can be accessed for searching the database
